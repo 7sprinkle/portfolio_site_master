@@ -1,0 +1,476 @@
+@charset "utf-8";
+
+/* ベーススタイル指定 */
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #788d98;
+  color: #333333;
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* リセットCSS */
+p,h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+
+img{
+  vertical-align: bottom;/* 垂直方向揃え指定 */
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* リンクの書式・装飾指定 */
+a{/* 通常時 */
+  color: #3583aa;
+  text-decoration: none;
+}
+
+a:visited{/* 訪問済 */
+  color: #788d98;
+}
+
+a:hover{/* ホバー時 */
+  text-decoration: underline;
+}
+
+/* headerエリアのスタイル指定 */
+header{
+  width: 960px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* class属性をセレクタにする　.クラス名{} */
+/* ロゴを左寄せ */
+.logo{
+  float: left;
+  margin-top: 50px;
+}
+/* メニューを右寄せ */
+.global-nav{
+  float: right;
+  margin-top: 60px;
+}
+/* メニュー項目を横並びに */
+.global-nav li{
+  float: left;
+  margin: 0 20px;
+  font-size: 20px;
+  list-style: none;/*行頭アイコン非表示*/
+  font-family: 'Bitter', serif;/*GoogleFonts*/
+}
+
+/* メニューのリンクカラーだけ白に指定 */
+.global-nav li a{
+  color: #ffffff;
+}
+
+.global-nav li a:hover{
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 3px;
+  text-decoration: none;/*下線を解除*/
+}
+
+/* コンテンツエリア(wrap)のスタイル指定 */
+/* id属性をセレクタにする #id名{} */
+#wrap{/*子孫セレクタ*/
+  clear: both;/* floatによる左右への回り込みを解除 */
+  /* background-color: #ffffff; */
+  background-image: url(../images/wallpaper-color.jpeg);
+  background-attachment: fixed;
+  margin-top: 110px;
+  padding: 35px 0;
+}
+
+.content{
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* footerエリアのスタイル指定 */
+footer{
+  text-align: center;/*文字の中央揃え*/
+  color: #ffffff;
+  padding: 40px 0;/*内側上下に余白*/
+  background-color: #333333;/* 背景色を指定 */
+  margin: 0 auto;
+}
+/* コピーライト表記フォントサイズ調整 */
+footer small{
+  padding-top: 40px;
+  font-size: 12px;
+  display: block;
+  clear: both;
+}
+
+
+.SNS{
+  width: 270px;
+	margin: auto;
+  padding-top: 20px;
+}
+
+.SNS li{
+  float: left;
+  margin: 0 20px;
+  list-style: none;
+}
+
+/* topページのスタイル指定 */
+#index h1{/*子孫セレクタ*/
+  font-size: 90px;
+  line-height: 1;
+  color: #ffffff;
+  font-family: 'Bitter', serif;
+  margin-bottom: 50px;
+  border: none;/* h1下の下線を削除 */
+}
+
+#index #wrap {
+  background-image: none;
+}
+
+#index .content{
+  margin-top: 150px;
+}
+
+#index p{
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/*ボタンの装飾*/
+.btn a{
+  background-color: #9cb4a4;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Bitter', serif;
+  width: 185px;
+  display: block;/* インライン要素をブロック要素として扱う*/
+  text-align: center;
+  line-height: 50px;
+  margin-top: 70px;
+  border-radius: 30px;
+  border: 3px solid #9cb4a4;
+}
+
+.btn a:hover{
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #9cb4a4;
+}
+/* footerの要素を左に寄せる */
+#index footer{
+  width: 960px;
+  margin: 100px auto 0 auto;/* 上部に余白 */
+  text-align: left;
+  background-color: transparent;/* footerエリアの背景色を透過 */
+}
+
+#index footer .SNS{
+  width: 270px;
+	margin: 0 0 0 700px;
+  padding-top: 20px;
+}
+
+#index .SNS li{
+  float: left;
+  margin: 0 20px;
+  list-style: none;
+}
+/* 背景画像設定 */
+#index {
+  background-image: url(../images/bg-index-b.jpg);/* 背景画像指定 */
+  background-repeat: no-repeat;/* 画像の繰り返し解除 */
+  background-position: center center;/* 画像開始位置指定 */
+  background-attachment: fixed;/* 背景画像固定 */
+  background-size: cover;/* 背景画像大きさ指定 */
+}
+/* プロフィールページのスタイル指定 */
+#about {
+  background-color: #333333;
+  /* background-image: url(../images/bg-about.jpg);背景画像指定 */
+  background-repeat: no-repeat;/* 画像の繰り返し解除 */
+  background-position: center top;/* 画像開始位置指定 */
+  background-attachment: fixed;/* 背景画像固定 */
+  background-size: 100% auto;/* 背景画像大きさ指定 */
+}
+/* メインエリアの幅を指定 */
+.main-center {
+  width: 940px;
+  padding: 0 40px 20px;
+  margin: 0 auto;
+  background-color:#ffffff ;
+}
+/* 大見出しのスタイル指定 */
+h1 {
+  font-family: 'Bitter', serif;
+  font-size: 36px;
+  border-bottom: 1px solid #cccccc;
+}
+/* 中見出しのスタイル指定 */
+h2 {
+  font-family: 'Bitter', serif;
+  font-size: 24px;
+}
+/* 中見出しのアイコン */
+.icon:before {
+  content: "";
+  padding-right: 10px;
+  border-left: 7px solid #9cb4a4;
+}
+
+/* プロフィールセクションレイアウト */
+/* プロフィール文の横幅調整と左寄せ */
+#about .profile-txt {
+  width: 540px;
+  float: left;
+}
+/* 「代表：山田太郎」を太字にする */
+#about .profile-txt span {
+  font-weight: bold;
+}
+/* プロフィール写真を右に配置する */
+#about .profile-image {
+  float: right;
+}
+/* 「 Career and job history」の回り込みを解除 */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* セクション間の余白を調整 */
+section {
+  margin-bottom: 35px;
+}
+
+/* 表の装飾 */
+/* 見出しセルのスタイル指定 */
+#about .career th {
+  width: 240px;/* 見出しセルの幅 */
+  background-color: #f0f0f0;/* 見出しセルの背景色 */
+  padding: 12px 0;/* 見出しセルの上下幅 */
+  border: 1px solid #cccccc;/* 見出しセルの罫線を装飾 */
+}
+/* データセルのスタイル指定 */
+#about .career td {
+  width: 660px;/* 横幅 */
+  padding: 12px 0 12px 40px;/* 上下幅 */
+  border: 1px solid #cccccc;/* 罫線 */
+}
+/* セル間の隙間を調整 */
+table {
+  border-spacing: 0;/* セル間の隙間を調整 */
+  border-collapse: collapse;/* 罫線を重ねて表示 */
+}
+
+/* index.htmlに影響をあたえている部分を修正 */
+#index #wrap {
+  background-color: transparent;/* 背景を透明にする */
+  margin-top: 0;/* 余白の設定を解除 */
+  padding: 0;/* 余白の設定を解除 */
+}
+
+/* ポートフォリオページのスタイル指定 */
+#portfolio {
+  background-color: #333333;
+  /* background-image: url(../images/bg-portfolio.jpg);背景(メインビジュアル)画像指定 */
+  background-repeat: no-repeat;/* 画像の繰り返し解除 */
+  background-position: center top;/* 画像開始位置指定 */
+  background-attachment: fixed;/* 背景画像固定 */
+  background-size: 100% auto;/* 背景画像大きさ指定 */
+}
+/* メインエリアのレイアウト指定 */
+.main {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 40px 20px;
+  background-color:#ffffff ;
+}
+
+#portfolio .work-list li {
+  float: left;
+  list-style: none;
+  margin: 0 140px 80px 0;
+}
+
+#portfolio .work-list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* お問合せページのスタイル指定 */
+#contact {
+  background-color: #333333;
+  /* background-image: url(../images/bg-contact.jpg);背景(メインビジュアル)画像指定 */
+  background-repeat: no-repeat;/* 画像の繰り返し解除 */
+  background-position: center top;/* 画像開始位置指定 */
+  background-attachment: fixed;/* 背景画像固定 */
+  background-size: 100% auto;/* 背景画像大きさ指定 */
+}
+
+/* アクセスセクションのレイアウト */
+#contact .access table {
+  float: left;/* table要素を左寄せ */
+}
+/* 表組みを装飾 */
+#contact .access th
+#contact .access td {
+  text-align: left;/* テキスト表示位置左よせ */
+  vertical-align: top;/* テキスト表示位置上端揃え */
+  line-height:2.5 ;/* 行間指定 */
+}
+/* 見出しせるとデータセルの間に余白を入れる */
+#contact .access td {
+  padding-left: 30px;
+}
+/* マップの表示位置を調整 */
+#contact .access iframe {
+  width: 460px;
+  float: right;
+}
+
+/* フォームセクションのスタイル指定 */
+#contact .form {
+  background-color: #eaeaea;/* 背景色指定 */
+  padding: 30px 50px;/* 余白指定 */
+}
+/* 各項目表示エリア指定 */
+#contact .form dl dt {
+  width: 165px;
+  padding: 10px 0;
+  float: left;/* 項目と入力欄を横並びにする */
+  clear: both;/* 項目の回り込みを解除 */
+}
+/* 項目と入力欄の高さを合わせる */
+#contact .form dl dd {
+  padding: 10px 0;
+}
+/* 名前入力欄のサイズ指定 */
+#contact .form .name {
+  width: 240px;
+  height: 30px;
+}
+/* メールアドレス入力欄サイズ指定 */
+#contact .form .email {
+  width: 300px;
+  height: 30px;
+}
+/* 電話番号入力欄サイズ指定 */
+#contact .form .tel {
+  width: 240px;
+  height: 30px;
+}
+/* 問い合わせ種別サイズ指定 */
+#contact .form .type {
+  width: 180px;
+  height: 30px;
+}
+/* メッセージ入力欄サイズ指定 */
+#contact .form .message {
+  width: 660px;
+  height: 150px;
+}
+/* 送信ボタンのスタイル指定 */
+#contact .form button {
+  background-color: #9cb4a4;
+  color: #ffffff;
+  font-size: 20px;
+  width: 120px;
+  display: block;/* インライン要素をブロック要素として扱う*/
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  border: 3px solid #9cb4a4;
+  margin-left: 165px;/* ボタン表示位置調整 */
+}
+/* ホバー時のスタイル指定 */
+#contact .form button:hover {
+  background-color: #ffffff;
+  color: #9cb4a4;
+  cursor: pointer;/* カーソル(ポインタ)形状指定 */
+}
+/* 必須項目のマークを指定 */
+#contact .form .required::after {
+  content: "*";
+  color: #ff0000;
+}
+/* 注意書きの位置指定 */
+#contact .form .attention {
+  margin: 20px 0 0 165px;
+}
+
+/* メディアクエリ レスポンシブ対応 */
+@media screen and (max-width:600px) {/* 画面サイズが600px以下の場合に適用 */
+  
+  body {
+    font-size: 3.5vw;
+  }
+
+  h1 {
+    font-size: 7.2vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+  /* headerの幅と左右のmargin指定 */
+  header {
+    width: auto;
+    margin: 0 5%;
+  }
+  /* ロゴの位置を調整 */
+  .logo {
+    float: none;/* float解除 */
+    margin-top: 20px;
+    text-align: center;/* 中央揃え */
+  }
+  /* ナビの位置を調整 */
+  .global-nav {
+    float: none;/* float解除 */
+    margin: 10px 0 20px 0;
+    text-align: center;/* 中央揃え */
+  }
+
+  .global-nav li {
+    display: inline;/* インライン要素に変更 */
+    float: none;/* float解除 */
+    margin: 0 8px;
+  }
+  /* コンテンツ全体の表示位置調整 */
+  #wrap {
+    margin-top: 40px;
+    padding: 35px 0 0;
+  }
+  /* コンテンツエリアの横幅指定 */
+  .content {
+    width: 100%;
+  }
+  /* メインエリアの横幅・余白指定 */
+  .main {
+    float: none;
+    width: auto;
+    margin: 0 5%;
+  }
+  /* 画像の調整 */
+  h2 img {
+    max-width: 100%;
+  }
+  /* メインビジュアル入れ替え */
+  #portfolio {
+    background-image: url(../images/bg-portfolio-sp.jpg);
+  }
+  /* サイドバーの位置・幅調整 */
+  .sidebar {
+    width: auto;
+    float: none;/* float解除 */
+    margin: 0;
+    padding: 30px 10% 10px;/* 上30px 左右10％ 下10px */
+    background-color: #f7f6f4;/* 背景色指定 */
+  }
+}
